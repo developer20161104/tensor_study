@@ -70,3 +70,5 @@ test = np.arange(1, 19).reshape((3,6))
 print(np.array_split(test,4,axis=1))
 
 np.random.uniform(-4, 4, 6)
+
+print('hello world')
