@@ -1,10 +1,9 @@
 import tensorflow as tf
 from tensorflow import keras
-from tensorflow.keras import backend as f
 import numpy as np
 import time
-import base_ops.dataset_ops as dops
-from base_ops.dataset_ops import to_onehot
+import dataset_ops as dops
+from dataset_ops import to_onehot
 import math
 
 
@@ -169,9 +168,17 @@ if __name__ == '__main__':
     pred_period, pred_len, prefixes = 50, 50, ['分开', '不分开']
 
     # train with random sampling
+    # train_and_predict_rnn(rnn, get_params, init_rnn_state, num_hiddens,
+    #                       vocab_size, corpus_indices, idx_to_char,
+    #                       char_to_idx, True, num_epochs, num_steps, lr,
+    #                       clipping_theta, batch_size, pred_period, pred_len,
+    #                       prefixes)
+
+    # train with consecutive sampling
     train_and_predict_rnn(rnn, get_params, init_rnn_state, num_hiddens,
                           vocab_size, corpus_indices, idx_to_char,
-                          char_to_idx, True, num_epochs, num_steps, lr,
+                          char_to_idx, False, num_epochs, num_steps, lr,
                           clipping_theta, batch_size, pred_period, pred_len,
                           prefixes)
+
 
