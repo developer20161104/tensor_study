@@ -5,8 +5,8 @@ import tensorflow as tf
 from tensorflow.keras import models, layers
 
 # 载入结构化数据
-dftrain_raw = pd.read_csv('../../data/titanic/train.csv')
-dftest_raw = pd.read_csv('../../data/titanic/test.csv')
+dftrain_raw = pd.read_csv('../data/titanic/train.csv')
+dftest_raw = pd.read_csv('../data/titanic/test.csv')
 # print(dftrain_raw.head(10))
 
 # 存活分布情况
