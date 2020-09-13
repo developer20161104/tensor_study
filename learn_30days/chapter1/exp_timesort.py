@@ -102,7 +102,7 @@ model.compile(
 )
 
 stamp = datetime.datetime.now().strftime("%Y%m%d-%H%M%S")
-logdir = os.path.join('../data', 'autograph', stamp)
+logdir = os.path.join('..\\data', 'autograph', stamp)
 
 # 回调函数部分值得学习
 # tensorboard
@@ -160,5 +160,5 @@ print(dfresult.query('confirmed_num==0').head())
 print(dfresult.query("cured_num==0").head())
 print(dfresult.query("dead_num==0").head())
 
-model.save('./save_model/timesort_model', save_format="tf")
+model.save('.\\save_model\\timesort_model', save_format="tf")
 print('export saved model.')
